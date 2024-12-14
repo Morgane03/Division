@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerSpleetScreen : MonoBehaviour
@@ -47,13 +45,12 @@ public class PlayerSpleetScreen : MonoBehaviour
         _cameraPlayer2.GetComponent<Camera>().rect = new Rect(0.5f, 0, 1, 1);
     }
 
-    private void SpleetScreenOff()
+    public void SpleetScreenOff()
     {
         _cameraPlayer1.rect = new Rect(0, 0, 1, 1);
         _cameraPlayer2.SetActive(false);
         _player2.SetActive(false);
         _player2.transform.position = _player1.transform.position + new Vector3(-0.5f, 0, 0);
-        
-        //_cameraPlayer2.GetComponent<Camera>().rect = new Rect(0, 0, 1, 1);
+        _isSpleetScreen = false;
     }
 }

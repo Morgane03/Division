@@ -11,7 +11,7 @@ public class PlayerInput : MonoBehaviour
     [SerializeField]
     private LayerMask _groundLayer;
 
-    private bool IsGrounded()
+    public bool IsGrounded()
     {
         return Physics2D.OverlapBox(_groundCheck.position, new Vector2(0, -0.5f), 0, _groundLayer);
     }
@@ -25,14 +25,14 @@ public class PlayerInput : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext context)
     {
-        PlayerMain.Movement.Jump();
+        if (context.performed && IsGrounded())
+        {
+            PlayerMain.Movement.Jump();
+        }
     }
 
     public void OnSpleetScreen(InputAction.CallbackContext context)
     {
-        if (context.performed && IsGrounded())
-        {
-            PlayerMain.SpleetScreen.SpleetScreens();
-        }
+        PlayerMain.SpleetScreen.SpleetScreens();
     }
 }

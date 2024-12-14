@@ -17,9 +17,10 @@ GameObject:
   - component: {fileID: 112843123358580241}
   - component: {fileID: 1455194145639593221}
   - component: {fileID: 1492072809252036193}
+  - component: {fileID: 8380645906791859198}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -164,7 +165,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1609328680218108138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,6 +318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Movement: {fileID: 112843123358580241}
   SpleetScreen: {fileID: 1492072809252036193}
+  Input: {fileID: 1455194145639593221}
 --- !u!114 &112843123358580241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,8 +331,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb7e6d0f754f620488aa4d9569e1d2f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpForce: 50
+  _playerMain: {fileID: 7138082780493598846}
+  moveSpeed: 8
+  jumpForce: 5
 --- !u!114 &1455194145639593221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,6 +367,19 @@ MonoBehaviour:
   _cameraPlayer2: {fileID: 3608031723519852551}
   _player2: {fileID: 6390455089485375169}
   _player1: {fileID: 34342209123850207}
+--- !u!114 &8380645906791859198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34342209123850207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d01af1d6a95de7b41b0cace8db6c376a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMain: {fileID: 7138082780493598846}
 --- !u!1 &764481869003673115
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,9 +758,10 @@ GameObject:
   - component: {fileID: 2919862882434891870}
   - component: {fileID: 6638670977076141536}
   - component: {fileID: 1885190645317655116}
+  - component: {fileID: 3030614756038824820}
   m_Layer: 0
   m_Name: Player2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -875,7 +892,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.0001
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -889,7 +906,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &5960598850976188303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1003,7 +1020,7 @@ MonoBehaviour:
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player2
   m_SplitScreenIndex: -1
-  m_Camera: {fileID: 8177035102588232138}
+  m_Camera: {fileID: 0}
 --- !u!114 &2919862882434891870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1018,6 +1035,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Movement: {fileID: 6638670977076141536}
   SpleetScreen: {fileID: 1492072809252036193}
+  Input: {fileID: 1885190645317655116}
 --- !u!114 &6638670977076141536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1030,6 +1048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb7e6d0f754f620488aa4d9569e1d2f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerMain: {fileID: 2919862882434891870}
   moveSpeed: 5
   jumpForce: 5
 --- !u!114 &1885190645317655116
@@ -1049,3 +1068,16 @@ MonoBehaviour:
   _groundLayer:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &3030614756038824820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6390455089485375169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d01af1d6a95de7b41b0cace8db6c376a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMain: {fileID: 2919862882434891870}
