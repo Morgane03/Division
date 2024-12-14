@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -9,12 +6,16 @@ public class PlayerMovement : MonoBehaviour
     //public event Action StartedMoving;
     //public event Action StoppedMoving;
 
+    [SerializeField]
+    private PlayerMain _playerMain;
+
     private Vector2 _moveInput;
 
     [SerializeField]
     private float moveSpeed = 5f;
     [SerializeField]
     private float jumpForce = 5f;
+    private float _gravity = -9.8f;
 
     private Rigidbody2D _rb;
 
@@ -32,13 +33,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector2 movement = _moveInput * moveSpeed * Time.fixedDeltaTime;
-        _rb.MovePosition(_rb.position + movement);
+        Vector2 moveVelocity = new Vector2(_moveInput.x * moveSpeed, _rb.velocity.y);
+        _rb.velocity = moveVelocity;
     }
 
     public void Jump()
     {
-        //_rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-        _rb.velocity = new Vector2(_rb.velocity.x, jumpForce);
+        _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
     }
 }
