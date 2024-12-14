@@ -319,6 +319,7 @@ MonoBehaviour:
   Movement: {fileID: 112843123358580241}
   SpleetScreen: {fileID: 1492072809252036193}
   Input: {fileID: 1455194145639593221}
+  Attack: {fileID: 0}
 --- !u!114 &112843123358580241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -759,6 +760,7 @@ GameObject:
   - component: {fileID: 6638670977076141536}
   - component: {fileID: 1885190645317655116}
   - component: {fileID: 3030614756038824820}
+  - component: {fileID: 7762573342417323683}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Player
@@ -1016,6 +1018,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 1a469fd2-2b19-43e5-a013-07026b90a21a
     m_ActionName: Player/Jump[/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1885190645317655116}
+        m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
+        m_MethodName: OnAttack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7a707053-4bf1-4dcd-b5c1-a8de1b23cef9
+    m_ActionName: Player2/Attack[/Keyboard/ctrl]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player2
@@ -1036,6 +1054,7 @@ MonoBehaviour:
   Movement: {fileID: 6638670977076141536}
   SpleetScreen: {fileID: 1492072809252036193}
   Input: {fileID: 1885190645317655116}
+  Attack: {fileID: 7762573342417323683}
 --- !u!114 &6638670977076141536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1081,3 +1100,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMain: {fileID: 2919862882434891870}
+--- !u!114 &7762573342417323683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6390455089485375169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85301f3c62f68d243890712a4da6c695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
