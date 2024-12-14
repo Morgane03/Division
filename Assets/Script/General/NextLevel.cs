@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -48,7 +49,9 @@ public class NextLevel : MonoBehaviour
             }
             else
             {
+                _infoText.gameObject.SetActive(true);
                 _infoText.text = "Vous devez collecter la clé pour ouvrir la porte !";
+                StartCoroutine(DisableText());
             }
         }
     }
@@ -57,5 +60,11 @@ public class NextLevel : MonoBehaviour
     {
         level++;
         key.isCollected = false;
+    }
+
+    private IEnumerator DisableText()
+    {
+        yield return new WaitForSeconds(2f);
+        _infoText.gameObject.SetActive(false);
     }
 }
