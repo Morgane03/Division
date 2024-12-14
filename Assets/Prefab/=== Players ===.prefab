@@ -333,7 +333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerMain: {fileID: 7138082780493598846}
   moveSpeed: 8
-  jumpForce: 5
+  jumpForce: 8
 --- !u!114 &1455194145639593221
 MonoBehaviour:
   m_ObjectHideFlags: 0
