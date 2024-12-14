@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        FindObjectOfType<Bullet>().OnHit += Respawn; // Subscribe to the OnHit event)
         currentCheckpoint = transform.position; // Set the initial spawn position as the checkpoint
     }
 
@@ -20,5 +21,13 @@ public class PlayerController : MonoBehaviour
     {
         playerMain.SpleetScreen.SpleetScreenOff(); // Disable the split screen (if it's enabled 
         transform.position = currentCheckpoint; // Respawn the player at the checkpoint
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Bullet"))
+        {
+            Respawn();
+        }
     }
 }
