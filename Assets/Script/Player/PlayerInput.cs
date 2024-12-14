@@ -1,18 +1,38 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerInput : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public PlayerMain PlayerMain;
+    private Vector2 _moveInput;
+
+    [SerializeField]
+    private Transform _groundCheck;
+    [SerializeField]
+    private LayerMask _groundLayer;
+
+    private bool IsGrounded()
     {
-        
+        return Physics2D.OverlapBox(_groundCheck.position, new Vector2(0, -0.5f), 0, _groundLayer);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnMove(InputAction.CallbackContext context)
     {
-        
+        _moveInput = context.ReadValue<Vector2>();
+
+        PlayerMain.Movement.SetDirection(_moveInput);
+    }
+
+    public void OnJump(InputAction.CallbackContext context)
+    {
+        PlayerMain.Movement.Jump();
+    }
+
+    public void OnSpleetScreen(InputAction.CallbackContext context)
+    {
+        if (context.performed && IsGrounded())
+        {
+            PlayerMain.SpleetScreen.SpleetScreens();
+        }
     }
 }
