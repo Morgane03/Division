@@ -25305,7 +25305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74b4f951aca6f004f95dc1a996cda7d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _capy: {fileID: 0}
+  _capy: {fileID: 8300000, guid: 96a49169aef33744da46ef59466af578, type: 3}
   _capySource: {fileID: 2000692011}
 --- !u!61 &2000692013
 BoxCollider2D:
