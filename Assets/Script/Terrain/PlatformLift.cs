@@ -3,13 +3,23 @@ using UnityEngine;
 
 public class PlatformLift : MonoBehaviour
 {
-    [SerializeField] private float _duration;
+    [SerializeField] private float _timeToClimb;
     [SerializeField] private float _height;
+    [SerializeField] private float _durationWait;
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(MovePlatform(new Vector2(transform.position.x, transform.position.y + _height), _duration));
+        StartCoroutine(MovePlatformLoop());
+    }
+
+    private IEnumerator MovePlatformLoop()
+    {
+        while (true) // Boucle infinie
+        {
+            yield return StartCoroutine(MovePlatform(new Vector2(transform.position.x, transform.position.y + _height), _timeToClimb));
+            yield return StartCoroutine(MovePlatform(new Vector2(transform.position.x, transform.position.y - _height), _timeToClimb)); // Retour à la position de départ
+        }
     }
 
     private IEnumerator MovePlatform(Vector2 targetPos, float duration)
@@ -25,7 +35,6 @@ public class PlatformLift : MonoBehaviour
         }
 
         transform.position = targetPos;
-
-        //StartCoroutine(MovePlatform(new Vector2(transform.position.x, transform.position.y - _height), _duration));
+        yield return new WaitForSeconds(_durationWait);
     }
 }
