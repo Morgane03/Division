@@ -27,7 +27,6 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
-        _sprite = GetComponent<SpriteRenderer>();
     }
 
 
