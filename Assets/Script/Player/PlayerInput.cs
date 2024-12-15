@@ -40,7 +40,6 @@ public class PlayerInput : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext context)
     {
-        Debug.Log(_camJump);
         if (context.performed && _camJump)
         {
             PlayerMain.Movement.Jump();
