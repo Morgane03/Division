@@ -35,8 +35,8 @@ Transform:
   m_GameObject: {fileID: 34342209123850207}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.58, y: 0.52, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalPosition: {x: 0.58, y: -0.61, z: 0}
+  m_LocalScale: {x: 6, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3403549989540911806}
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -398625131, guid: bd9ad6fdd6023b04e8b2c455b778193f, type: 3}
+  m_Sprite: {fileID: -1157530781, guid: c7a9a1c72877b2b4a8dbc1919bb9dab2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -127,18 +127,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00021621585, y: 0.0034265965}
+  m_Offset: {x: 0.010415167, y: 0.0006896965}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.3, y: 0.32}
+    oldSize: {x: 0.12, y: 0.16}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.31306, y: 0.33175537}
+  m_Size: {x: 0.10472874, y: 0.16389266}
   m_EdgeRadius: 0
 --- !u!50 &843267073808911308
 Rigidbody2D:
@@ -193,6 +193,18 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 00dad0f1-1dab-4f79-9929-4d2e66cba842
+    m_ActionName: Player/Move[/Keyboard/z,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/q,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 81fa576a-90c6-4654-aff3-b719e11bceef
+    m_ActionName: Player/Look[/Mouse/delta,/Pen/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 47d985df-b7d0-47a2-a45c-431fd98f8058
+    m_ActionName: Player/Fire[/Mouse/leftButton]
+  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1455194145639593221}
         m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
@@ -206,18 +218,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 00dad0f1-1dab-4f79-9929-4d2e66cba842
-    m_ActionName: Player/Move[/Keyboard/z,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/q,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 81fa576a-90c6-4654-aff3-b719e11bceef
-    m_ActionName: Player/Look[/Mouse/delta,/Pen/delta]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 47d985df-b7d0-47a2-a45c-431fd98f8058
-    m_ActionName: Player/Fire[/Mouse/leftButton]
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: 5b7a47e0-42c7-4697-b134-f8f345235ab1
     m_ActionName: Player2/Move[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
   - m_PersistentCalls:
@@ -269,21 +269,13 @@ MonoBehaviour:
     m_ActionId: 5cfcc9da-1303-4bb0-b2a4-7683dd90ac87
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1455194145639593221}
-        m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
-        m_MethodName: OnSpleetScreen
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: a2eb7ca4-52ad-47f4-82b6-e4fc86a01ed7
     m_ActionName: Player/SpleetScreen[/Keyboard/x]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1b595f64-e132-4494-85f2-4cddfd9575e5
+    m_ActionName: PlayerRobot/Attack[/Keyboard/space]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1455194145639593221}
@@ -298,11 +290,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 1a469fd2-2b19-43e5-a013-07026b90a21a
-    m_ActionName: Player/Jump[/Keyboard/w]
+    m_ActionId: 452ea74a-3700-4d95-9bd2-69a494bebcea
+    m_ActionName: PlayerSmall/Jump[/Keyboard/ctrl]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
-  m_DefaultActionMap: Player
+  m_DefaultActionMap: PlayerSmall
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &7138082780493598846
@@ -617,7 +609,7 @@ Transform:
   m_GameObject: {fileID: 3074426140246583944}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: -10}
+  m_LocalPosition: {x: 0, y: 0.432, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -650,7 +642,7 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: -0.5
     y: 0
     width: 1
     height: 1
@@ -708,7 +700,7 @@ Transform:
   m_GameObject: {fileID: 3608031723519852551}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.2, y: 0.5931641, z: -10}
+  m_LocalPosition: {x: 0, y: 0.35, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -784,6 +776,7 @@ GameObject:
   - component: {fileID: 3030614756038824820}
   - component: {fileID: 7762573342417323683}
   - component: {fileID: 4460821857902520033}
+  - component: {fileID: 9204158585863410825}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Player
@@ -800,8 +793,8 @@ Transform:
   m_GameObject: {fileID: 6390455089485375169}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.2, y: -0.5931641, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -3.2, y: -0.07, z: 0}
+  m_LocalScale: {x: 6, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5266979181622258941}
@@ -849,11 +842,11 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5177388603050735206, guid: 8884154dfe85442a3a3578be807dbcdf, type: 3}
+  m_Sprite: {fileID: -398625131, guid: bd9ad6fdd6023b04e8b2c455b778193f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 2
+  m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
@@ -892,18 +885,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.000051535666, y: 0.00010293722}
   m_SpriteTilingProperty:
-    border: {x: 0.25, y: 0.25, z: 0.25, w: 0.25}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.3, y: 0.32}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
-    drawMode: 2
+    drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.30868822, y: 0.32685477}
   m_EdgeRadius: 0
 --- !u!50 &6991843611093830310
 Rigidbody2D:
@@ -958,18 +951,6 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 00dad0f1-1dab-4f79-9929-4d2e66cba842
-    m_ActionName: Player/Move[/Keyboard/z,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/q,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 81fa576a-90c6-4654-aff3-b719e11bceef
-    m_ActionName: Player/Look[/Mouse/delta,/Pen/delta]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 47d985df-b7d0-47a2-a45c-431fd98f8058
-    m_ActionName: Player/Fire[/Mouse/leftButton]
-  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1885190645317655116}
         m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
@@ -983,6 +964,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_ActionId: 00dad0f1-1dab-4f79-9929-4d2e66cba842
+    m_ActionName: Player/Move[/Keyboard/z,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/q,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 81fa576a-90c6-4654-aff3-b719e11bceef
+    m_ActionName: Player/Look[/Mouse/delta,/Pen/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 47d985df-b7d0-47a2-a45c-431fd98f8058
+    m_ActionName: Player/Fire[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
     m_ActionId: 5b7a47e0-42c7-4697-b134-f8f345235ab1
     m_ActionName: Player2/Move[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
   - m_PersistentCalls:
@@ -1034,13 +1027,21 @@ MonoBehaviour:
     m_ActionId: 5cfcc9da-1303-4bb0-b2a4-7683dd90ac87
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1885190645317655116}
+        m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
+        m_MethodName: OnSpleetScreen
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: a2eb7ca4-52ad-47f4-82b6-e4fc86a01ed7
     m_ActionName: Player/SpleetScreen[/Keyboard/x]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 1a469fd2-2b19-43e5-a013-07026b90a21a
-    m_ActionName: Player/Jump[/Keyboard/w]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1885190645317655116}
@@ -1055,11 +1056,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 7a707053-4bf1-4dcd-b5c1-a8de1b23cef9
-    m_ActionName: Player2/Attack[/Keyboard/ctrl]
+    m_ActionId: 1b595f64-e132-4494-85f2-4cddfd9575e5
+    m_ActionName: PlayerRobot/Attack[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 452ea74a-3700-4d95-9bd2-69a494bebcea
+    m_ActionName: PlayerSmall/Jump[/Keyboard/ctrl]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Player2
+  m_DefaultActionMap: PlayerRobot
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &2919862882434891870
@@ -1075,7 +1080,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Movement: {fileID: 6638670977076141536}
-  SpleetScreen: {fileID: 1492072809252036193}
+  SpleetScreen: {fileID: 9204158585863410825}
   Input: {fileID: 1885190645317655116}
   Attack: {fileID: 7762573342417323683}
 --- !u!114 &6638670977076141536
@@ -1156,3 +1161,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &9204158585863410825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6390455089485375169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aac346f686f7255499d3882c76b0ee7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cameraPlayer1: {fileID: 3074426140246583944}
+  _cameraPlayer2: {fileID: 8177035102588232138}
+  _player2: {fileID: 6390455089485375169}
+  _player1: {fileID: 34342209123850207}

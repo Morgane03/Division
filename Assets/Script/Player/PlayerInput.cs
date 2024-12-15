@@ -33,7 +33,10 @@ public class PlayerInput : MonoBehaviour
 
     public void OnSpleetScreen(InputAction.CallbackContext context)
     {
-        PlayerMain.SpleetScreen.SpleetScreens();
+        if (context.performed)
+        {
+            PlayerMain.SpleetScreen.SpleetScreens();
+        }
     }
 
     public void OnAttack(InputAction.CallbackContext context)
