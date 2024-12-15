@@ -43,6 +43,11 @@ public class NextLevel : MonoBehaviour
                         key.transform.position = _keysPosition[2].transform.position;
                         _door.transform.position = _doorsPosition[2].transform.position;
                         break;
+                    case 4:
+                        collision.gameObject.transform.position = levels[3].transform.position;
+                        key.transform.position = _keysPosition[3].transform.position;
+                        _door.transform.position = _doorsPosition[3].transform.position;
+                        break;
                     default:
                         Debug.Log("Niveau non défini !");
                         break;
@@ -61,6 +66,7 @@ public class NextLevel : MonoBehaviour
     {
         level++;
         key.isCollected = false;
+        key.gameObject.SetActive(true);
     }
 
     private IEnumerator DisableText()

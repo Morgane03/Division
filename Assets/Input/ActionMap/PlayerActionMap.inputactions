@@ -295,28 +295,6 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "up",
-                    "id": "5723b8d5-f137-4632-9166-57d2a4506840",
-                    "path": "<Keyboard>/upArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "c83611a1-3854-4008-9918-8ac730c298cf",
-                    "path": "<Keyboard>/downArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
                     "name": "left",
                     "id": "90343fea-ddd1-4b92-ab13-86646a2b57ea",
                     "path": "<Keyboard>/leftArrow",
@@ -451,7 +429,7 @@
                 {
                     "name": "",
                     "id": "1e36fdaf-13e3-40f5-9db4-a6774f003ec2",
-                    "path": "<Keyboard>/ctrl",
+                    "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",

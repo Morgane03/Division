@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,10 +12,7 @@ public class PlayerInput : MonoBehaviour
     [SerializeField]
     private LayerMask _groundLayer;
 
-    public bool IsGrounded()
-    {
-        return Physics2D.OverlapBox(_groundCheck.position, new Vector2(0, -0.5f), 0, _groundLayer);
-    }
+    private bool _camJump = true;
 
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -23,11 +21,31 @@ public class PlayerInput : MonoBehaviour
         PlayerMain.Movement.SetDirection(_moveInput);
     }
 
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.CompareTag("Ground"))
+    //    {
+    //        Debug.Log(collision.gameObject.tag);
+    //        Debug.Log("Ground");
+    //        _camJump = true;
+    //        Debug.Log(_camJump);
+    //    }
+    //}
+
+    private IEnumerator Jump()
+    {
+        yield return new WaitForSeconds(1f);
+        _camJump = true;
+    }
+
     public void OnJump(InputAction.CallbackContext context)
     {
-        if (context.performed && IsGrounded())
+        Debug.Log(_camJump);
+        if (context.performed && _camJump)
         {
             PlayerMain.Movement.Jump();
+            _camJump = false;
+            StartCoroutine(Jump());
         }
     }
 
