@@ -74731,7 +74731,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3727874555005546853, guid: 40c76fb028c71484c9d81529c09856fa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.4
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3727874555005546853, guid: 40c76fb028c71484c9d81529c09856fa, type: 3}
       propertyPath: m_LocalPosition.y
@@ -74780,6 +74780,14 @@ PrefabInstance:
     - target: {fileID: 8177035102588232138, guid: 40c76fb028c71484c9d81529c09856fa, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9023867119411464322, guid: 40c76fb028c71484c9d81529c09856fa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.14999986
+      objectReference: {fileID: 0}
+    - target: {fileID: 9023867119411464322, guid: 40c76fb028c71484c9d81529c09856fa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.000000067055225
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -76194,6 +76202,7 @@ MonoBehaviour:
   - {fileID: 1548242699}
   - {fileID: 2033188697}
   _infoText: {fileID: 146996540}
+  _sceneName: MainMenu
 --- !u!61 &1104433761
 BoxCollider2D:
   m_ObjectHideFlags: 0
