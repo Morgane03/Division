@@ -4,9 +4,9 @@ public class PlayerSpleetScreen : MonoBehaviour
 {
     //Camera
     [SerializeField]
-    private Camera _cameraPlayer1;
+    private GameObject _cameraPlayer1;
     [SerializeField]
-    private GameObject _cameraPlayer2;
+    private Camera _cameraPlayer2;
 
     //Player
     [SerializeField]
@@ -19,7 +19,7 @@ public class PlayerSpleetScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _cameraPlayer2.GetComponent<Camera>();
+        _cameraPlayer1.GetComponent<Camera>();
     }
 
     public void SpleetScreens()
@@ -39,18 +39,18 @@ public class PlayerSpleetScreen : MonoBehaviour
 
     private void SpleetScreenOn()
     {
-        _cameraPlayer1.rect = new Rect(-0.5f, 0, 1, 1);
-        _cameraPlayer2.SetActive(true);
-        _player2.SetActive(true);
-        _cameraPlayer2.GetComponent<Camera>().rect = new Rect(0.5f, 0, 1, 1);
+        _cameraPlayer2.rect = new Rect(-0.5f, 0, 1, 1);
+        _cameraPlayer1.SetActive(true);
+        _player1.SetActive(true);
+        _cameraPlayer1.GetComponent<Camera>().rect = new Rect(0.5f, 0, 1, 1);
     }
 
     public void SpleetScreenOff()
     {
-        _cameraPlayer1.rect = new Rect(0, 0, 1, 1);
-        _cameraPlayer2.SetActive(false);
-        _player2.SetActive(false);
-        _player2.transform.position = _player1.transform.position + new Vector3(-0.5f, 0, 0);
+        _cameraPlayer2.rect = new Rect(0, 0, 1, 1);
+        _cameraPlayer1.SetActive(false);
+        _player1.SetActive(false);
+        _player1.transform.position = _player2.transform.position + new Vector3(0.5f, 0, 0);
         _isSpleetScreen = false;
     }
 }
