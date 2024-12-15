@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.SearchService;
 using UnityEngine;
 
 public class NextLevel : MonoBehaviour
@@ -14,6 +15,8 @@ public class NextLevel : MonoBehaviour
     [SerializeField] private List<GameObject> _doorsPosition;
 
     [SerializeField] private TextMeshProUGUI _infoText;
+
+    [SerializeField] private string _sceneName;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -47,6 +50,9 @@ public class NextLevel : MonoBehaviour
                         collision.gameObject.transform.position = levels[3].transform.position;
                         key.transform.position = _keysPosition[3].transform.position;
                         _door.transform.position = _doorsPosition[3].transform.position;
+                        break;
+                    case 5:
+                        UnityEngine.SceneManagement.SceneManager.LoadScene(_sceneName);
                         break;
                     default:
                         Debug.Log("Niveau non défini !");

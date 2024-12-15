@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 8094108838412041157}
   - component: {fileID: 1284927234407387240}
   - component: {fileID: 4468967908138388717}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -430,7 +430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5266979181622258941}
   - component: {fileID: 2510717638188899892}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grounded
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -507,7 +507,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3403549989540911806}
   - component: {fileID: 3827389609769545003}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grounded
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -815,7 +815,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9023867119411464322}
   - component: {fileID: 8791704776726234717}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Virtual Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -887,7 +887,7 @@ GameObject:
   m_Component:
   - component: {fileID: 499753218148544688}
   - component: {fileID: 4040410155635589860}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Virtual CameraG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -960,7 +960,7 @@ GameObject:
   - component: {fileID: 6743624726581661377}
   - component: {fileID: 826907248577623956}
   - component: {fileID: 74143739666348401}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1059,7 +1059,7 @@ GameObject:
   - component: {fileID: 7331644671666429082}
   - component: {fileID: 3610270493440765943}
   - component: {fileID: 4460821857902520033}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player2
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1501,7 +1501,7 @@ GameObject:
   - component: {fileID: 6281302673015104150}
   - component: {fileID: 6597363911170054780}
   - component: {fileID: 5852459875166750684}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1640,7 +1640,7 @@ Transform:
   m_GameObject: {fileID: 8495551618936590261}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.2, y: -0.07, z: -10}
+  m_LocalPosition: {x: -3.3500004, y: -0.06999993, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1796,6 +1796,10 @@ PrefabInstance:
       value: SmokeWalk2
       objectReference: {fileID: 0}
     - target: {fileID: 6672714058089602810, guid: 0f554ff690b4e8f48955aefd4a0725d9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672714058089602810, guid: 0f554ff690b4e8f48955aefd4a0725d9, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -1913,6 +1917,10 @@ PrefabInstance:
     - target: {fileID: 8245085373273764792, guid: f9dca9494c8e94a47bb277036ca7932d, type: 3}
       propertyPath: m_Name
       value: SmokeWalk1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245085373273764792, guid: f9dca9494c8e94a47bb277036ca7932d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8245085373273764792, guid: f9dca9494c8e94a47bb277036ca7932d, type: 3}
       propertyPath: m_IsActive
