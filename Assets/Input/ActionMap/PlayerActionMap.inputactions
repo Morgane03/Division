@@ -2,7 +2,7 @@
     "name": "PlayerActionMap",
     "maps": [
         {
-            "name": "Player",
+            "name": "PlayerRobot",
             "id": "a2559997-cf29-41e5-9d48-113514759758",
             "actions": [
                 {
@@ -42,9 +42,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Jump",
+                    "name": "Attack",
                     "type": "Button",
-                    "id": "1a469fd2-2b19-43e5-a013-07026b90a21a",
+                    "id": "1b595f64-e132-4494-85f2-4cddfd9575e5",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -219,19 +219,19 @@
                 },
                 {
                     "name": "",
-                    "id": "b7c9de14-75d3-44bf-982a-286aa2b48a95",
+                    "id": "80074fc5-d41e-4ca1-9b29-3b487bfc20c2",
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Jump",
+                    "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
             ]
         },
         {
-            "name": "Player2",
+            "name": "PlayerSmall",
             "id": "4e43b7d3-2090-4925-83cb-4aa6a18890de",
             "actions": [
                 {
@@ -262,9 +262,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Attack",
+                    "name": "Jump",
                     "type": "Button",
-                    "id": "7a707053-4bf1-4dcd-b5c1-a8de1b23cef9",
+                    "id": "452ea74a-3700-4d95-9bd2-69a494bebcea",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -450,12 +450,12 @@
                 },
                 {
                     "name": "",
-                    "id": "f6e5670e-9463-419d-859d-b5efc096b586",
+                    "id": "1e36fdaf-13e3-40f5-9db4-a6774f003ec2",
                     "path": "<Keyboard>/ctrl",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Attack",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

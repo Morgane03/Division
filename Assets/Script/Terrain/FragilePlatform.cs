@@ -4,11 +4,12 @@ using System.Collections;
 public class FragilePlatform : MonoBehaviour
 {
     public float breakDelay = 0.5f; // Délai avant que la plateforme se casse
+    [SerializeField] private GameObject _playerRobot;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // Vérifiez si le collider qui touche la plateforme a un certain tag, par exemple "Player"
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && collision.gameObject == _playerRobot)
         {
             // Commencez la coroutine pour casser la plateforme après un délai
             StartCoroutine(BreakPlatform());
