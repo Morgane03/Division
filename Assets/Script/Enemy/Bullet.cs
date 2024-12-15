@@ -7,8 +7,6 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float speed = 10f; // Vitesse du projectile
     [SerializeField] private float lifetime = 3f; // Durée de vie du projectile avant de disparaître
 
-    public event System.Action OnHit; // Événement déclenché lorsqu'un projectile touche un ennemi
-
     private Vector2 direction; // Direction dans laquelle le projectile est tiré
 
     private void OnEnable()
