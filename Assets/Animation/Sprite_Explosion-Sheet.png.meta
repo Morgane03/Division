@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c7a9a1c72877b2b4a8dbc1919bb9dab2
+guid: 0a9c8557a1becf140934a75275772034
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -94,11 +94,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Humain Iddle_0
+      name: Sprite_Explosion-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,41 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 420a37c81980a3444a292df32804225c
-      internalID: -1157530781
+      spriteID: eae5ef14f7a82b440955e3ad9a168122
+      internalID: -109971992
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Humain Iddle_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b9ac3eee4c8ab0f44ab7947469f584a3
-      internalID: -1910645503
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Humain Iddle_2
+      name: Sprite_Explosion-Sheet_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f30cbd55b5713ba41abb847054c09dbd
-      internalID: 172426337
+      spriteID: 3f808e9f89831ed4c9d10de2fabfea5e
+      internalID: -1017272132
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Humain Iddle_3
+      name: Sprite_Explosion-Sheet_2
       rect:
         serializedVersion: 2
-        x: 48
+        x: 64
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,8 +166,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a75152c20975f654081b8fc25a29635e
-      internalID: 1149154294
+      spriteID: 33d3361022f27e946a1604106ea4024d
+      internalID: -793752371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Explosion-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bfa8614cc4d69a4c8e21070e9dadfa0
+      internalID: 573729054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Explosion-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40cb891b14a870b47bb3251c08b9829b
+      internalID: -1025734002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Explosion-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84199d65ba3c5db45b8b25c412e7c1bf
+      internalID: 313487563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_Explosion-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6219b0d10e4c92b4cba323b2956e63de
+      internalID: 1454107611
       vertices: []
       indices: 
       edges: []
@@ -204,10 +267,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Humain Iddle_0: -1157530781
-      Humain Iddle_1: -1910645503
-      Humain Iddle_2: 172426337
-      Humain Iddle_3: 1149154294
+      Sprite_Explosion-Sheet_0: -109971992
+      Sprite_Explosion-Sheet_1: -1017272132
+      Sprite_Explosion-Sheet_2: -793752371
+      Sprite_Explosion-Sheet_3: 573729054
+      Sprite_Explosion-Sheet_4: -1025734002
+      Sprite_Explosion-Sheet_5: 313487563
+      Sprite_Explosion-Sheet_6: 1454107611
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

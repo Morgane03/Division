@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        FindObjectOfType<Bullet>().OnHit += Respawn; // Subscribe to the OnHit event)
         currentCheckpoint = transform.position; // Set the initial spawn position as the checkpoint
     }
 
