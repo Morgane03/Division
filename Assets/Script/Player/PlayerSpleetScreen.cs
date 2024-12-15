@@ -4,9 +4,9 @@ public class PlayerSpleetScreen : MonoBehaviour
 {
     //Camera
     [SerializeField]
-    private GameObject _cameraPlayer1;
+    private Camera _cameraSplit;
     [SerializeField]
-    private Camera _cameraPlayer2;
+    private Camera _cameraMain;
 
     [SerializeField] private Sprite _spriteRobot;
     [SerializeField] private Sprite _spriteJoueur1;
@@ -25,7 +25,7 @@ public class PlayerSpleetScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _cameraPlayer1.GetComponent<Camera>();
+        _cameraSplit.gameObject.SetActive(false);
     }
 
     public void SpleetScreens()
@@ -45,20 +45,19 @@ public class PlayerSpleetScreen : MonoBehaviour
 
     private void SpleetScreenOn()
     {
-        _cameraPlayer2.rect = new Rect(-0.5f, 0, 1, 1);
-        _cameraPlayer1.SetActive(true);
+        _cameraMain.rect = new Rect(0f, 0, 0.5f, 1);
+        _cameraSplit.gameObject.SetActive(true);
         _player1.SetActive(true);
         _player2.GetComponent<SpriteRenderer>().sprite = _spriteJoueur1;
         _player2.GetComponent<Animator>().runtimeAnimatorController = _animRobotSolo;
-        _cameraPlayer1.GetComponent<Camera>().rect = new Rect(0.5f, 0, 1, 1);
     }
 
     public void SpleetScreenOff()
     {
         _player2.GetComponent<SpriteRenderer>().sprite = _spriteRobot;
         _player2.GetComponent<Animator>().runtimeAnimatorController = _animPlayer1;
-        _cameraPlayer2.rect = new Rect(0, 0, 1, 1);
-        _cameraPlayer1.SetActive(false);
+        _cameraMain.rect = new Rect(0, 0, 1, 1);
+        _cameraSplit.gameObject.SetActive(false);
         _player1.SetActive(false);
         _player1.transform.position = _player2.transform.position + new Vector3(0.5f, 0, 0);
         _isSpleetScreen = false;
