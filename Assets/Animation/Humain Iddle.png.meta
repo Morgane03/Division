@@ -113,9 +113,9 @@ TextureImporter:
       name: Humain Iddle_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 0
-        width: 12
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -134,9 +134,9 @@ TextureImporter:
       name: Humain Iddle_1
       rect:
         serializedVersion: 2
-        x: 17
+        x: 16
         y: 0
-        width: 12
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -145,7 +145,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcbedbd8f612bc646a7551e831456859
+      spriteID: b9ac3eee4c8ab0f44ab7947469f584a3
       internalID: -1910645503
       vertices: []
       indices: 
@@ -155,9 +155,9 @@ TextureImporter:
       name: Humain Iddle_2
       rect:
         serializedVersion: 2
-        x: 33
+        x: 32
         y: 0
-        width: 12
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -166,7 +166,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5228dca2cbe99f489302d5f7dbd0c41
+      spriteID: f30cbd55b5713ba41abb847054c09dbd
       internalID: 172426337
       vertices: []
       indices: 
@@ -176,9 +176,9 @@ TextureImporter:
       name: Humain Iddle_3
       rect:
         serializedVersion: 2
-        x: 49
+        x: 48
         y: 0
-        width: 12
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -187,7 +187,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 529dfda1df6691845a2ece903c334293
+      spriteID: a75152c20975f654081b8fc25a29635e
       internalID: 1149154294
       vertices: []
       indices: 
