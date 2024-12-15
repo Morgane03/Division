@@ -1574,10 +1574,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7138082780493598846, guid: 40c76fb028c71484c9d81529c09856fa, type: 3}
-      propertyPath: SpleetScreen
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 8177035102588232138, guid: 40c76fb028c71484c9d81529c09856fa, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
       value: 0
