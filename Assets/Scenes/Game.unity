@@ -76390,7 +76390,7 @@ MonoBehaviour:
   key: {fileID: 1038101248}
   level: 1
   _door: {fileID: 1104433757}
-  _player: {fileID: 918734672}
+  _playerRobot: {fileID: 1528506847}
   levels:
   - {fileID: 1921180529}
   - {fileID: 924079584}

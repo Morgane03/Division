@@ -8,7 +8,7 @@ public class NextLevel : MonoBehaviour
     [SerializeField] private Key key; // Référence à l'objet de la clé
     [SerializeField] private int level = 1;
     [SerializeField] private GameObject _door;
-    [SerializeField] private GameObject _player;
+    [SerializeField] private GameObject _playerRobot;
 
     [SerializeField] private List<GameObject> levels;
     [SerializeField] private List<GameObject> _keysPosition;
@@ -32,24 +32,24 @@ public class NextLevel : MonoBehaviour
                 {
                     case 1:
                         // Charger le niveau 1
-                        _player.transform.position = levels[0].transform.position;
+                        _playerRobot.transform.position = levels[0].transform.position;
                         key.transform.position = _keysPosition[0].transform.position;
                         _door.transform.position = _doorsPosition[0].transform.position;
                         Next();
                         break;
                     case 2:
-                        _player.transform.position = levels[1].transform.position;
+                        _playerRobot.transform.position = levels[1].transform.position;
                         key.transform.position = _keysPosition[1].transform.position;
                         _door.transform.position = _doorsPosition[1].transform.position;
                         Next();
                         break;
                     case 3:
-                        _player.transform.position = levels[2].transform.position;
+                        _playerRobot.transform.position = levels[2].transform.position;
                         key.transform.position = _keysPosition[2].transform.position;
                         _door.transform.position = _doorsPosition[2].transform.position;
                         break;
                     case 4:
-                        _player.transform.position = levels[3].transform.position;
+                        _playerRobot.transform.position = levels[3].transform.position;
                         key.transform.position = _keysPosition[3].transform.position;
                         _door.transform.position = _doorsPosition[3].transform.position;
                         break;
