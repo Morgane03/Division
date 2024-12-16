@@ -8,6 +8,7 @@ public class NextLevel : MonoBehaviour
     [SerializeField] private Key key; // Référence à l'objet de la clé
     [SerializeField] private int level = 1;
     [SerializeField] private GameObject _door;
+    [SerializeField] private GameObject _player;
 
     [SerializeField] private List<GameObject> levels;
     [SerializeField] private List<GameObject> _keysPosition;
@@ -16,6 +17,8 @@ public class NextLevel : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _infoText;
 
     [SerializeField] private string _sceneName;
+
+    [SerializeField] private PlayerSpleetScreen _des;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -29,24 +32,24 @@ public class NextLevel : MonoBehaviour
                 {
                     case 1:
                         // Charger le niveau 1
-                        collision.gameObject.transform.position = levels[0].transform.position;
+                        _player.transform.position = levels[0].transform.position;
                         key.transform.position = _keysPosition[0].transform.position;
                         _door.transform.position = _doorsPosition[0].transform.position;
                         Next();
                         break;
                     case 2:
-                        collision.gameObject.transform.position = levels[1].transform.position;
+                        _player.transform.position = levels[1].transform.position;
                         key.transform.position = _keysPosition[1].transform.position;
                         _door.transform.position = _doorsPosition[1].transform.position;
                         Next();
                         break;
                     case 3:
-                        collision.gameObject.transform.position = levels[2].transform.position;
+                        _player.transform.position = levels[2].transform.position;
                         key.transform.position = _keysPosition[2].transform.position;
                         _door.transform.position = _doorsPosition[2].transform.position;
                         break;
                     case 4:
-                        collision.gameObject.transform.position = levels[3].transform.position;
+                        _player.transform.position = levels[3].transform.position;
                         key.transform.position = _keysPosition[3].transform.position;
                         _door.transform.position = _doorsPosition[3].transform.position;
                         break;
@@ -71,6 +74,7 @@ public class NextLevel : MonoBehaviour
     {
         level++;
         key.isCollected = false;
+        _des.SpleetScreenOff();
         key.gameObject.SetActive(true);
     }
 

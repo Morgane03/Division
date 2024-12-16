@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private GameObject _player;
     [SerializeField]
     private PlayerMain playerMain;
     private Vector2 currentCheckpoint;
@@ -19,7 +20,7 @@ public class PlayerController : MonoBehaviour
     public void Respawn()
     {
         playerMain.SpleetScreen.SpleetScreenOff(); // Disable the split screen (if it's enabled 
-        transform.position = currentCheckpoint; // Respawn the player at the checkpoint
+        _player.transform.position = currentCheckpoint; // Respawn the player at the checkpoint
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

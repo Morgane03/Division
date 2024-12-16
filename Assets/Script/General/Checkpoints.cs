@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Checkpoints : MonoBehaviour
 {
-    public Vector2 checkpointPosition;
+    private Vector2 checkpointPosition;
     public GameObject player;
 
     private void Start()
