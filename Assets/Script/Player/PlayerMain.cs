@@ -6,4 +6,6 @@ public class PlayerMain : MonoBehaviour
     public PlayerSpleetScreen SpleetScreen;
     public PlayerInput Input;
     public PlayerAttack Attack;
+    public PlayerController Controller;
+    public PlayerParticle Particles;
 }

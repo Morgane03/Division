@@ -37,7 +37,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (_moveInput != Vector2.zero)
         {
-            if(_moveInput.x > 0)
+            StartedMoving?.Invoke();
+
+            if (_moveInput.x > 0)
             {
                 transform.rotation = Quaternion.Euler(0, 0, 0);
             }
@@ -45,7 +47,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 transform.rotation = Quaternion.Euler(0, 180, 0);
             }
-            StartedMoving?.Invoke();
         }
         else
         {
