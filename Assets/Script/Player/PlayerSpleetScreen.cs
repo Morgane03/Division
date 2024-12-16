@@ -47,6 +47,7 @@ public class PlayerSpleetScreen : MonoBehaviour
     {
         _cameraMain.rect = new Rect(0f, 0, 0.5f, 1);
         _cameraSplit.gameObject.SetActive(true);
+        _player1.transform.position = _player2.transform.position + new Vector3(2.5f, 0, 0);
         _player1.SetActive(true);
         _player2.GetComponent<SpriteRenderer>().sprite = _spriteJoueur1;
         _player2.GetComponent<Animator>().runtimeAnimatorController = _animRobotSolo;
@@ -59,7 +60,7 @@ public class PlayerSpleetScreen : MonoBehaviour
         _cameraMain.rect = new Rect(0, 0, 1, 1);
         _cameraSplit.gameObject.SetActive(false);
         _player1.SetActive(false);
-        _player1.transform.position = _player2.transform.position + new Vector3(0.5f, 0, 0);
+        //_player1.transform.position = _player2.transform.position + new Vector3(0.5f, 0, 0);
         _isSpleetScreen = false;
     }
 }
