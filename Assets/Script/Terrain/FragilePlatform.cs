@@ -5,6 +5,7 @@ public class FragilePlatform : MonoBehaviour
 {
     public float breakDelay = 0.5f; // Délai avant que la plateforme se casse
     [SerializeField] private GameObject _playerRobot;
+    [SerializeField] private GameObject _platformBreak; // Effet de casse de la plateforme
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -22,7 +23,7 @@ public class FragilePlatform : MonoBehaviour
         yield return new WaitForSeconds(breakDelay);
 
         // Désactiver la plateforme ou jouer une animation de casse
-        gameObject.SetActive(false);
+        _platformBreak.gameObject.SetActive(false);
 
         // Optionnel : Vous pouvez jouer un son ou une animation ici
     }

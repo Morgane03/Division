@@ -34,10 +34,10 @@ public class PlayerMovement : MonoBehaviour
     public void SetDirection(Vector2 direction)
     {
         _moveInput = direction;
+        StartedMoving?.Invoke();
 
         if (_moveInput != Vector2.zero)
         {
-            StartedMoving?.Invoke();
 
             if (_moveInput.x > 0)
             {
