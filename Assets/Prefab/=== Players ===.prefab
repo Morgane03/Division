@@ -315,8 +315,8 @@ MonoBehaviour:
   SpleetScreen: {fileID: 9204158585863410825}
   Input: {fileID: 1455194145639593221}
   Attack: {fileID: 1284927234407387240}
-  Controller: {fileID: 0}
-  Particles: {fileID: 0}
+  Controller: {fileID: 8380645906791859198}
+  Particles: {fileID: 8094108838412041157}
 --- !u!114 &112843123358580241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -361,7 +361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d01af1d6a95de7b41b0cace8db6c376a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 2803379318635483575}
+  _player: {fileID: 6390455089485375169}
   playerMain: {fileID: 7138082780493598846}
 --- !u!114 &3133112587213230636
 MonoBehaviour:
@@ -1368,8 +1368,8 @@ MonoBehaviour:
   SpleetScreen: {fileID: 9204158585863410825}
   Input: {fileID: 1885190645317655116}
   Attack: {fileID: 7762573342417323683}
-  Controller: {fileID: 0}
-  Particles: {fileID: 0}
+  Controller: {fileID: 3030614756038824820}
+  Particles: {fileID: 7331644671666429082}
 --- !u!114 &6638670977076141536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1414,7 +1414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d01af1d6a95de7b41b0cace8db6c376a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 2803379318635483575}
+  _player: {fileID: 6390455089485375169}
   playerMain: {fileID: 2919862882434891870}
 --- !u!114 &9204158585863410825
 MonoBehaviour:
