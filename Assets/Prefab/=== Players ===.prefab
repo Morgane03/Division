@@ -1436,6 +1436,9 @@ MonoBehaviour:
   _animRobotSolo: {fileID: 9100000, guid: bbc285c3dffed7244a1f9f7bfa2da8fd, type: 2}
   _player2: {fileID: 6390455089485375169}
   _player1: {fileID: 34342209123850207}
+  _colliders:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &7762573342417323683
 MonoBehaviour:
   m_ObjectHideFlags: 0
