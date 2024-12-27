@@ -9,6 +9,7 @@ public class Trap : MonoBehaviour
             PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
             if (playerController != null)
             {
+                UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
                 playerController.Respawn();
             }
         }

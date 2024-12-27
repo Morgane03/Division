@@ -49,11 +49,13 @@ public class NextLevel : MonoBehaviour
                         _playerRobot.transform.position = levels[2].transform.position;
                         key.transform.position = _keysPosition[2].transform.position;
                         _door.transform.position = _doorsPosition[2].transform.position;
+                        Next();
                         break;
                     case 4:
                         _playerRobot.transform.position = levels[3].transform.position;
                         key.transform.position = _keysPosition[3].transform.position;
                         _door.transform.position = _doorsPosition[3].transform.position;
+                        Next();
                         break;
                     case 5:
                         UnityEngine.SceneManagement.SceneManager.LoadScene(_sceneName);
